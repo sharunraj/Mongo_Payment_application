@@ -1,0 +1,74 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Invoice Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="fdd356f2-ec21-4ec3-a042-679610010a55">
+	<parameter name="amount" class="java.lang.Double"/>
+	<parameter name="username" class="java.lang.String"/>
+	<parameter name="purchaseOrderNumber" class="java.lang.String"/>
+	<parameter name="invoiceNumber" class="java.lang.String"/>
+	<parameter name="targetBankAccount" class="java.lang.String"/>
+	<parameter name="sourceBankAccount" class="java.lang.String"/>
+	<parameter name="tds" class="java.lang.Integer"/>
+	<parameter name="status" class="java.lang.String"/>
+	<parameter name="paymentDate" class="java.lang.String"/>
+	<parameter name="item" class="java.lang.String"/>
+	<parameter name="quantity" class="java.lang.String"/>
+	<title height="60">
+		<element kind="textField" uuid="0292fb33-b783-4a9a-828a-aa70a1cf7a61" x="0" y="0" width="100" height="30" fontSize="12.0">
+			<expression><![CDATA["INVOICE"]]></expression>
+		</element>
+	</title>
+	<columnHeader height="20">
+		<element kind="line" uuid="f8642694-c081-4114-88b9-ad8d8d3a0077" x="0" y="0" width="595" height="1"/>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="textField" uuid="c163e30b-810b-4e52-b45a-8f0859487396" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["User: " + $P{username}]]></expression>
+			</element>
+			<element kind="textField" uuid="0aa5558a-9831-4e54-8193-d75b78d90000" x="300" y="0" width="200" height="20">
+				<expression><![CDATA["Invoice Number: " + $P{invoiceNumber}]]></expression>
+			</element>
+		</band>
+		<band height="20">
+			<element kind="textField" uuid="fff828e6-1cd0-4de8-ab34-e06a1b76fee7" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["Item: " + $P{item}]]></expression>
+			</element>
+			<element kind="textField" uuid="eaae8f37-042b-4e5c-a6cd-1e292f7ce324" x="300" y="0" width="200" height="20">
+				<expression><![CDATA["Amount: $" + $P{amount}]]></expression>
+			</element>
+		</band>
+		<band height="20">
+			<element kind="textField" uuid="870f7f2d-e083-4edd-864f-8d38dbd8f5ea" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["Purchase Order Number: " + $P{purchaseOrderNumber}]]></expression>
+			</element>
+			<element kind="textField" uuid="2c8820e1-af3d-48d2-8139-bd36db3450cd" x="300" y="0" width="200" height="20">
+				<expression><![CDATA["Target Bank Account: " + $P{targetBankAccount}]]></expression>
+			</element>
+		</band>
+		<band height="20">
+			<element kind="textField" uuid="d3616c6b-3fd0-4781-95cd-db3cf30593bf" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["Source Bank Account: " + $P{sourceBankAccount}]]></expression>
+			</element>
+			<element kind="textField" uuid="c251c103-4f7b-4c2d-bef3-422ccf5813b7" x="300" y="0" width="200" height="20">
+				<expression><![CDATA["TDS: $" + $P{tds}]]></expression>
+			</element>
+		</band>
+		<band height="20">
+			<element kind="textField" uuid="4cd47d5f-5c37-4499-b632-bc7f7b0bc386" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["Status: " + $P{status}]]></expression>
+			</element>
+			<element kind="textField" uuid="9d12ad7b-f75a-4e1a-a6f4-ba7f1705c2e0" x="300" y="0" width="200" height="20">
+				<expression><![CDATA["Payment Date: " + $P{paymentDate}]]></expression>
+			</element>
+		</band>
+		<band height="20">
+			<element kind="textField" uuid="706af3af-6fc6-45a4-b927-7537088a1091" x="0" y="0" width="200" height="20">
+				<expression><![CDATA["Quantity (Hours): " + $P{quantity}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<summary height="20">
+		<element kind="textField" uuid="bbae29ce-9b44-47e4-9258-13623057b0ac" x="0" y="0" width="595" height="20">
+			<expression><![CDATA["Thank you for your business!"]]></expression>
+		</element>
+	</summary>
+</jasperReport>
